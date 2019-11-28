@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/styles2.css" />
         <title>NuCamp: A Better Way To Camp</title>
     </head>
     <body>
@@ -19,11 +19,13 @@
                         <img src="./img/logo.png" alt="company logo" class="image-fluid">
                     </div>
                     <div class="col">
-                        <h1>NuCamp</h1>
-                        <h2>a better way to camp</h2>
+                        <h1 class="company-name">NuCamp</h1>
+                        <h2 class="company-tagline">a better way to camp</h2>
                     </div>
                     <div class="col col-md-4 col-xl-2 align-self-center">
-                        <a href="#reserveForm" class="btn btn-info btn-lg" role="button" data-toggle="tooltip" data-html="true" title="Or call us at <br/> <strong>555-555-5555</strong>" data-placement="bottom">Reserve Campsite</a>
+                        <a href="#" class="btn btn-info btn-lg login-btn" role="button" data-toggle="modal" data-target="#loginModal">
+                            <i class="fa fa-sign-in"></i> Login
+                        </a>
                     </div>
                 </div>
             </div>
@@ -31,22 +33,17 @@
 
         <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
             <div class="container">
-                <a href="#" class="navbar-brand"><img src="./img/logo.png" alt="company logo" height="30" width="30"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="nucampNavbar">
+                <div class="collapse navbar-collapse d-sm-flex justify-content-center" id="nucampNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reserveForm"><i class="fa fa-book fa-lg"></i> Reserve Campsite</a></li>
                     </ul>
-                    <span class="navbar-text ml-auto">
-                        <a role="button" data-toggle="modal" data-target="#loginModal">
-                            <i class="fa fa-sign-in"></i> Login
-                        </a>
-                    </span>
                 </div>
             </div>
         </nav>
@@ -131,48 +128,94 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-content align-items-center">
-                <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2 class="text-sm-right">Discover & Review</h2>
-                </div>
-                <div class="col">
-                    <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail"src="./img/breadcrumb-trail-thumb.jpg" alt="breadcrumb trail thumbnail">
+            <!-- Content -->
+
+            <ul class="nav nav-tabs mt-5 d-none d-md-flex" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="discover-review-tab" data-toggle="tab" href="#dr" role="tab" aria-controls="Discover & Review" aria-selected="true"><h4>Discover & Review</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="featured-campsite-tab" data-toggle="tab" href="#fc" role="tab" aria-controls="Featured Campsite" aria-selected="false"><h4>Featured Campsite</h4></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="community-partners-tab" data-toggle="tab" href="#cp" role="tab" aria-controls="Our Community Partners" aria-selected="false"><h4>Our Community Partners</h4></a>
+                </li>
+            </ul>
+            <div class="tab-content row-content border border-top-0 d-none d-md-flex" id="myTabContent">
+                <div class="tab-pane fade show active" id="dr" role="tabpanel" aria-labelledby="discover-review-tab">
+                    <div class="media mt-2">
+                        <img class="d-flex mx-3"src="./img/breadcrumb-trail-thumb.jpg" alt="breadcrumb trail thumbnail">
                         <div class="media-body align-self-center">
                             <h3>Our Campsites</h3>
                             <p>Explore our growing database of curated campsites and leave your own reviews!</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row row-content align-items-center">
-                <div class="col-sm-4 col-md-3">
-                    <h2>Featured Campsites</h2>
-                </div>
-                <div class="col">
-                    <div class="media">
+                <div class="tab-pane fade" id="fc" role="tabpanel" aria-labelledby="featured-campsite-tab">
+                    <div class="media mt-2">
+                        <img class="d-flex mx-3 " src="./img/react-lake-thumb.jpg" alt="react lake thumbnail">
                         <div class="media-body align-self-center">
                             <h3>React Lake Campground</h3>
                             <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                         </div>
-                        <img class="d-flex ml-3 img-thumbnail" src="./img/react-lake-thumb.jpg" alt="react lake thumbnail">
                     </div>
                 </div>
-            </div>
-            <div class="row row-content align-items-center">
-                <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2 class="text-sm-right">Our Community Partners</h2>
-                </div>
-                <div class="col">
+                <div class="tab-pane fade" id="cp" role="tabpanel" aria-labelledby="community-partners-tab">
                     <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="./img/bootstrap-thumb.png" alt="bootstrap thumbnail">
-                        <div class="media-body align-self-center">
-                            <h3>Bootstrap Outfitters</h3>
-                            <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-                        </div>
+                            <img class="d-flex mx-3" src="./img/bootstrap-thumb.png" alt="bootstrap thumbnail">
+                            <div class="media-body align-self-center">
+                                <h3>Bootstrap Outfitters</h3>
+                                <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                            </div>
                     </div>
                 </div>
             </div>
+            <!-- only displays in xs & s -->
+            <div class="d-block d-md-none">
+                    <div class="row row-content align-items-center">
+                            <div class="col-sm-4 order-sm-last col-md-3">
+                                <h2 class="text-sm-right">Discover & Review</h2>
+                            </div>
+                            <div class="col">
+                                <div class="media">
+                                    <img class="d-flex mr-3 img-thumbnail"src="./img/breadcrumb-trail-thumb.jpg" alt="breadcrumb trail thumbnail">
+                                    <div class="media-body align-self-center">
+                                        <h3>Our Campsites</h3>
+                                        <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-content align-items-center">
+                            <div class="col-sm-4 col-md-3">
+                                <h2>Featured Campsites</h2>
+                            </div>
+                            <div class="col">
+                                <div class="media">
+                                    <div class="media-body align-self-center">
+                                        <h3>React Lake Campground</h3>
+                                        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                                    </div>
+                                    <img class="d-flex ml-3 img-thumbnail" src="./img/react-lake-thumb.jpg" alt="react lake thumbnail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-content align-items-center">
+                            <div class="col-sm-4 order-sm-last col-md-3">
+                                <h2 class="text-sm-right">Our Community Partners</h2>
+                            </div>
+                            <div class="col">
+                                <div class="media">
+                                    <img class="d-flex mr-3 img-thumbnail" src="./img/bootstrap-thumb.png" alt="bootstrap thumbnail">
+                                    <div class="media-body align-self-center">
+                                        <h3>Bootstrap Outfitters</h3>
+                                        <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
             <div class="container">
                 <div class="row row-content">
                     <div class="col-sm-6 mx-auto">
