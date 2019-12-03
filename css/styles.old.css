@@ -15,13 +15,13 @@ header h2{
 }
 
 .site-footer{
-    background-image: linear-gradient(#9796f0, white);
+    background-image: linear-gradient(#cec8ff, white);
     padding: 20px 0;
 }
 
 .jumbotron {
     padding: 30px;
-    background-image: linear-gradient(to right, #fff, #076585);
+    background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
     color: white;
     margin: 0;
 }
@@ -33,7 +33,7 @@ header h2{
 }
 
 .navbar {
-    background-image: linear-gradient(to right, #fff, #076585);
+    background-color: #901CAD;
 }
 
 .carousel-caption{
@@ -44,20 +44,9 @@ header h2{
     border: solid #5637dd;
 }
 
-.company-name{
-    color: #901CAD;
-}
-
-.company-tagline{
-    color: #0096db;
-}
-
-.navbar-dark .navbar-nav .nav-link{
-    color: #272932;
-}
-
-.login-btn,
-.bg-info{
-    background-color: #901CAD!important;
+#carouselButton{
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
