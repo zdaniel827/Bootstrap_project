@@ -41,3 +41,12 @@ header h2 {
   position: absolute;
   right: 0;
   bottom: 0; }
+
+#loginModal .reserve-header,
+#reserveModal .reserve-header {
+  background-color: #17A2B8; }
+
+#loginModal .login-header,
+#reserveModal .login-header {
+  background-color: #901CAD;
+  color: white; }
